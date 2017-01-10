@@ -1,0 +1,17 @@
+{
+    "name": "yudu/service-signature",
+    "description": "A simple signature package of Laravel 5.3 for calling different services in a big system.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yudu",
+            "email": "uicosp@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Uicosp\\ServiceSignature\\": "src/"
+        }
+    }
+}
