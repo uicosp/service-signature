@@ -1,5 +1,5 @@
 {
-    "name": "yudu/service-signature",
+    "name": "uicosp/service-signature",
     "description": "A simple signature package of Laravel 5.3 for calling different services in a big system.",
     "license": "MIT",
     "authors": [
