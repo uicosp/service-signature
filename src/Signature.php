@@ -16,6 +16,7 @@ class Signature
      */
     public static function genArray($service, array $query = [])
     {
+        $service = strtolower($service);
         // 添加基础参数到 query
         $query = array_merge($query, [
             'service_key' => config("service-signature.{$service}.service_key"),
