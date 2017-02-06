@@ -26,8 +26,8 @@ class Signature
 
         // 计算签名
         $arr = array_merge($query, ['service_secret' => config("service-signature.{$service}.service_secret")]);
-        sort($arr, SORT_STRING);
-        $sign = md5(implode($arr));
+        ksort($arr, SORT_STRING);
+        $sign = md5(json_encode($arr));
 
         // 添加签名到 query
         $query = array_merge($query, ['signature' => $sign]);
