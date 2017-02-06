@@ -34,7 +34,7 @@ class VerifySignature
         $arr = array_except($input, ['signature']);
         $arr = array_merge($arr, ['service_secret' => config("service-signature.clients.{$input['service_key']}")]);
         ksort($arr, SORT_STRING);
-        $sign = md5(json_encode($arr));
+        $sign = md5(json_encode($arr, JSON_NUMERIC_CHECK));
 
         if ($sign != $input['signature']) {
             return response()->json('invalid signature', 400);
